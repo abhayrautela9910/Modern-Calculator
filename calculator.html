@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <form>
+        <div class="display">
+          <input type="text" id="display" readonly value="0">
+        </div>
+        <div class="row">
+          <input type="button" value="C" class="btn-clear" onclick="clearDisplay()">
+          <input type="button" value="⌫" class="btn-del" onclick="deleteLast()">
+          <input type="button" value="%" class="btn-op" onclick="appendToDisplay('%')">
+          <input type="button" value="÷" class="btn-op" onclick="appendToDisplay('÷')">
+        </div>
+        <div class="row">
+          <input type="button" value="7" class="btn-num" onclick="appendToDisplay('7')">
+          <input type="button" value="8" class="btn-num" onclick="appendToDisplay('8')">
+          <input type="button" value="9" class="btn-num" onclick="appendToDisplay('9')">
+          <input type="button" value="×" class="btn-op" onclick="appendToDisplay('×')">
+        </div>
+        <div class="row">
+          <input type="button" value="4" class="btn-num" onclick="appendToDisplay('4')">
+          <input type="button" value="5" class="btn-num" onclick="appendToDisplay('5')">
+          <input type="button" value="6" class="btn-num" onclick="appendToDisplay('6')">
+          <input type="button" value="-" class="btn-op" onclick="appendToDisplay('-')">
+        </div>
+        <div class="row">
+          <input type="button" value="1" class="btn-num" onclick="appendToDisplay('1')">
+          <input type="button" value="2" class="btn-num" onclick="appendToDisplay('2')">
+          <input type="button" value="3" class="btn-num" onclick="appendToDisplay('3')">
+          <input type="button" value="+" class="btn-op" onclick="appendToDisplay('+')">
+        </div>
+        <div class="row">
+          <input type="button" value="." class="btn-num" onclick="appendToDisplay('.')">
+          <input type="button" value="0" class="btn-num" onclick="appendToDisplay('0')">
+          <input type="button" value="()" class="btn-op" onclick="insertParen()">
+          <input type="button" value="!" class="btn-op" onclick="appendToDisplay('!')">
+        </div>
+        <div class="row">
+          <input type="button" value="π" class="btn-op" onclick="insertPi()">
+          <input type="button" value="√" class="btn-op" onclick="insertFunc('√')">
+          <input type="button" value="log" class="btn-op" onclick="insertFunc('log')">
+          <input type="button" value="^" class="btn-op" onclick="appendToDisplay('^')">
+        </div>
+        <div class="row">
+          <input type="button" value="=" class="equal-btn" onclick="calculate()">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
